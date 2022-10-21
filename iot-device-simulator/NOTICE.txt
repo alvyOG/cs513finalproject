@@ -1,0 +1,62 @@
+IoT Device Simulator
+Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+**********************
+THIRD PARTY COMPONENTS
+**********************
+This software includes third party software subject to the following copyrights:
+
+@aws-amplify/api under the Apache License 2.0
+@aws-amplify/auth under the Apache License 2.0
+@aws-amplify/core under the Apache License 2.0
+@aws-amplify/geo under the Apache License 2.0
+@aws-amplify/interactions under the Apache License 2.0
+@aws-amplify/storage under the Apache License 2.0
+@aws-amplify/ui-react under the Apache License 2.0
+@aws-cdk/aws-cloudfront under the Apache License 2.0
+@aws-cdk/aws-apigateway under the Apache License 2.0
+@aws-cdk/aws-cognito under the Apache License 2.0
+@aws-cdk/aws-dynamodb under the Apache License 2.0
+@aws-cdk/aws-iam under the Apache License 2.0
+@aws-cdk/aws-iot under the Apache License 2.0
+@aws-cdk/aws-lambda under the Apache License 2.0
+@aws-cdk/aws-location under the Apache License 2.0
+@aws-cdk/aws-logs under the Apache License 2.0
+@aws-cdk/aws-s3 under the Apache License 2.0
+@aws-cdk/aws-stepfunctions under the Apache License 2.0
+@aws-cdk/aws-stepfunctions-tasks under the Apache License 2.0
+@aws-cdk/core under the Apache License 2.0
+@aws-solutions-constructs/aws-cloudfront-s3 under the Apache License 2.0
+@aws-solutions-constructs/aws-lambda-stepfunctions under the Apache License 2.0
+@maplibre/maplibre-gl-geocoder under the ISC License
+@testing-library/jest-dom under the Massachusetts Institute of Technology (MIT) License
+@testing-library/react under the Massachusetts Institute of Technology (MIT) License
+@testing-library/user-event under the Massachusetts Institute of Technology (MIT) License
+@types/jest under the Massachusetts Institute of Technology (MIT) License
+@types/node under the Massachusetts Institute of Technology (MIT) License
+@types/uuid under the Massachusetts Institute of Technology (MIT) License
+@types/react under the Massachusetts Institute of Technology (MIT) License
+@types/react-dom under the Massachusetts Institute of Technology (MIT) License
+@types/react-router-dom under the Massachusetts Institute of Technology (MIT) License
+axios under the Massachusetts Institute of Technology (MIT) License
+aws-cdk under the Apache License 2.0
+aws-sdk under the Apache License 2.0
+bootstrap under the Massachusetts Institute of Technology (MIT) License
+bootstrap-icons under the Massachusetts Institute of Technology (MIT) License
+faker under the Massachusetts Institute of Technology (MIT) license
+jest under the Massachusetts Institute of Technology (MIT) License
+maplibre-gl under the BSD 3-Clause license
+maplibre-gl-js-amplify under the Apache License 2.0
+moment under the Massachusetts Institute of Technology (MIT) license
+nanoid under the Massachusetts Institute of Technology (MIT) license
+random-location under the Massachusetts Institute of Technology (MIT) License
+react under the Massachusetts Institute of Technology (MIT) License
+react-bootstrap under the Massachusetts Institute of Technology (MIT) License
+react-dom under the Massachusetts Institute of Technology (MIT) License
+react-router-dom under the Massachusetts Institute of Technology (MIT) License
+react-scripts under the Massachusetts Institute of Technology (MIT) License
+ts-jest under the Massachusetts Institute of Technology (MIT) License
+ts-node under the Massachusetts Institute of Technology (MIT) License
+typescript under the Apache License 2.0
+web-vitals under the Apache License 2.0
+uuid under the Massachusetts Institute of Technology (MIT) License
