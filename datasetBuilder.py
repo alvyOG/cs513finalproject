@@ -38,14 +38,8 @@ def labeling():
     print(trainingData_unlabeled)
     print(testingData_unlabeled)
 
-    trainingData_unlabeled.to_csv("trainset_labeled.csv")
-    testingData_unlabeled.to_csv("testset_labeled.csv")
+    trainingData_unlabeled.to_csv("trainset_labeled.csv", index=False)
+    testingData_unlabeled.to_csv("testset_labeled.csv", index=False)
 
     print("Send out to file")
-
-
-def joining():
-    files = ["testset_out1.csv", "testset_out2.csv", "testset_out3.csv"]
-    df = pd.concat(map(pd.read_csv, files), ignore_index=True)
-    df.to_csv("testset_unlabeled.csv")
 
