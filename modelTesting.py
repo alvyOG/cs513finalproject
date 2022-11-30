@@ -9,9 +9,9 @@ def test(filename):
     model = pickle.load(file)
     file.close()
 
-    yTest = testData['malicious'].values
     xTest = testData.drop('malicious', axis=1)
-    prediction = model.score(xTest, yTest)
+
+    prediction = model.predict(xTest)
     print(prediction)
 
 test("XGBoostModel.sav")
