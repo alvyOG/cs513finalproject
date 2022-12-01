@@ -14,4 +14,4 @@ def test(filename):
     prediction = model.predict(xTest)
     print(prediction)
 
-test("XGBoostModel.sav")
+test("XGboostModel.sav")
