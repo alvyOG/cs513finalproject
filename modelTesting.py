@@ -1,6 +1,8 @@
 import pandas as pd
 import pickle
 
+import time
+
 def test(filename):
     testData = pd.read_csv("testset.csv")
     print("File read in.")
@@ -11,7 +13,10 @@ def test(filename):
 
     xTest = testData.drop('malicious', axis=1)
 
+    start = time.perf_counter()
     prediction = model.predict(xTest)
+    end = time.perf_counter()
     print(prediction)
+    print(end-start)
 
 test("XGboostModel.sav")
