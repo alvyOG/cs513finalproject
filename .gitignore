@@ -1,1 +1,6 @@
 *.csv
+.vagrant
+.vagrant/*
+Vagrantfile
+.DS_Store
+py_packages.txt
