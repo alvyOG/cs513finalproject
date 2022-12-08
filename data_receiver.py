@@ -56,7 +56,6 @@ def recvall(sock, n):
 def server(server_ip, server_port, model):
     global openSocket
     global openConnection
-    packetsPredicted = 0
 
     # Open socket
     HOST = server_ip
@@ -67,24 +66,25 @@ def server(server_ip, server_port, model):
     openSocket.listen(QUEUE_LENGTH)
 
     # Accept next connection
-    (openConnection, addr) = openSocket.accept()
-    print("Server received connection!", flush=True)
-    # While connected
     while True:
-        # Receive data on the socket until no data left or buffer full
-        data = receiveMessage(openConnection)
-        if data == None:
-            break
-        packets = pickle.loads(data)
-        packetsPredicted += len(packets)
-        #print("Server running prediction.", flush=True)
-        runPrediction(packets, model)
-        #print("Server sending data back.", flush=True)
-        openConnection.sendall(b"done!")
+        packetsClassified = 0
+        (openConnection, addr) = openSocket.accept()
+        print("Server received connection!", flush=True)
+        # While connected
+        while True:
+            # Receive data on the socket until no data left or buffer full
+            data = receiveMessage(openConnection)
+            if data == None:
+                break
+            packets = pickle.loads(data)
+            packetsClassified += len(packets)
+            #print("Server running prediction.", flush=True)
+            runPrediction(packets, model)
+            #print("Server sending data back.", flush=True)
+            openConnection.sendall(b"done!")
 
-    openConnection.close()
-    openSocket.close()
-    print(f"{packetsPredicted} packets predicted", flush=True)
+        openConnection.close()
+        print(f"{packetsClassified} packets classified", flush=True)
     
 def main():
     if len(sys.argv) != 3:
