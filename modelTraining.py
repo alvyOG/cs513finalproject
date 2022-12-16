@@ -4,6 +4,7 @@ from sklearn.ensemble import RandomForestClassifier
 import xgboost as xgb
 import pickle
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import f1_score
 
 def manual_separation(bad_line):
     right_split = bad_line[:-2] + [",".join(bad_line[-2:])]
@@ -27,6 +28,7 @@ def training():
     rf.fit(xTrain, yTrain)
     prediction = rf.predict(xTest)
     print(f"Random Forest Classifier Test accuracy: {accuracy_score(yTest, prediction)}")
+    print(f"Random Forest Classifier F1 score: {f1_score(yTest, prediction)}")
 
     filename = "RandomForestModel.sav"
     pickle.dump(rf, open(filename, 'wb'))
@@ -36,6 +38,7 @@ def training():
     reg.fit(xTrain, yTrain)
     prediction = reg.predict(xTest)
     print(f"Logistic Regression Test accuracy: {accuracy_score(yTest, prediction)}")
+    print(f"Logistic Regression F1 score: {f1_score(yTest, prediction)}")
 
     filename = "LogisticRegressionModel.sav"
     pickle.dump(reg, open(filename, 'wb'))
@@ -45,6 +48,7 @@ def training():
     xgb_classifier.fit(xTrain, yTrain)
     prediction = xgb_classifier.predict(xTest)
     print(f"XGboost Test accuracy: {accuracy_score(yTest, prediction)}")
+    print(f"XGboost Test F1 score: {f1_score(yTest, prediction)}")
 
     filename = "XGboostModel.sav"
     pickle.dump(xgb_classifier, open(filename, 'wb'))
